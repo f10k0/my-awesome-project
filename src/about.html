@@ -1,32 +1,69 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    ... <!-- Скопируйте весь блок <head> из index.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О нас - Сайт Руслан</title>
-    <meta name="description" content="Узнайте больше о нашей компании и истории">
+    <meta name="description" content="Узнайте больше о моей истории и пути в программировании">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        ... <!-- Скопируйте весь блок <header> из index.html -->
+    <header class="site-header">
+        <div class="container site-header__container">
+            <a href="index.html" class="site-header__brand">Сайт Руслан</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a href="index.html" class="site-nav__link">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="about.html" class="site-nav__link" aria-current="page">О нас</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="contacts.html" class="site-nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <!-- Простые "хлебные крошки" -->
-        <nav aria-label="Хлебные крошки">
+    
+    <main class="container">
+        <!-- "Хлебные крошки" -->
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
             <a href="index.html">Главная</a> →
             <span>О нас</span>
         </nav>
-        <h1>О нашей компании</h1>
-        <section>
-            <h2>Наша история</h2>
-            <p>Текст о том, как все начиналось...</p>
+        
+        <h1 class="section__title">Обо мне</h1>
+        
+        <section class="section">
+            <h2>Моя история</h2>
+            <p>Я студент РТУ МИРЭА, Коршиков Руслан Алексеевич, занимался созданием игр на Unreal engine, увлекся этим и понял, что хочу стать программистом</p>
         </section>
-        <section>
-            <h2>Наша команда</h2>
-            <p>Текст о команде...</p>
+        
+        <section class="section">
+            <h2>Как строилось мое будущее программиста</h2>
+            <p>Постоянно учился в школе с упором на информатику, делал игры, в итоге выбрал прекрасное учебное заведение - РТУ МИРЭА</p>
+        </section>
+
+        <!-- Дополнительная секция с достижениями -->
+        <section class="section">
+            <h2>Мои интересы в IT</h2>
+            <ul>
+                <li>Разработка игр на Unreal Engine</li>
+                <li>Фронтенд-разработка (HTML, CSS, JavaScript)</li>
+                <li>Изучение современных технологий программирования</li>
+                <li>Создание пользовательских интерфейсов</li>
+            </ul>
         </section>
     </main>
-    <footer>
-        ... <!-- Скопируйте весь блок <footer> из index.html -->
+    
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Сайт Коршикова Руслана Алексеевича. Все права защищены.</p>
+            <p>Телефон: +7 (915) 136-58-95</p>
+        </div>
     </footer>
 </body>
 </html>

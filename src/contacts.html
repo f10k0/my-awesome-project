@@ -1,32 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    ... <!-- Скопируйте весь блок <head> из index.html -->
-    <title>О нас - Сайт Руслан</title>
-    <meta name="description" content="Узнайте больше обо мне">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Сайт Руслан</title>
+    <meta name="description" content="Контактная информация">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        ... <!-- Скопируйте весь блок <header> из index.html -->
+    <header class="site-header">
+        <div class="container site-header__container">
+            <a href="index.html" class="site-header__brand">Сайт Руслан</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a href="index.html" class="site-nav__link">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="about.html" class="site-nav__link">О нас</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="contacts.html" class="site-nav__link" aria-current="page">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <!-- Простая "контактная информация" -->
-        <nav aria-label="Обо мне">
+    
+    <main class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
             <a href="index.html">Главная</a> →
             <span>Контакты</span>
         </nav>
-        <h1>Контактные данные</h1>
-        <section>
+        
+        <h1 class="section__title">Контактные данные</h1>
+        
+        <section class="section">
             <h2>Почта</h2>
             <p>RUSTER.KoRsHiK@yandex.ru</p>
         </section>
-        <section>
+        
+        <section class="section">
             <h2>Личный номер телефона</h2>
             <p>+7-915-136-58-95</p>
         </section>
+
+        <section class="section">
+            <h2>Свяжитесь со мной</h2>
+            <button id="openDialogContacts" type="button" class="registration-btn">Написать сообщение</button>
+        </section>
     </main>
-    <footer>
-        ... <!-- Скопируйте весь блок <footer> из index.html -->
+    
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Сайт Коршикова Руслана Алексеевича. Все права защищены.</p>
+            <p>Телефон: +7 (915) 136-58-95</p>
+        </div>
     </footer>
+
+    <dialog id="contactDialog" aria-labelledby="contactDialogTitle">
+        <h2 id="contactDialogTitle">Свяжитесь со мной</h2>
+        
+        <form id="contactForm" method="dialog" novalidate class="form">
+            <label for="contactName" class="form__label">Ваше имя *</label>
+            <input id="contactName" name="name" type="text" required minlength="2" 
+                   autocomplete="given-name" class="form__input">
+            
+            <label for="contactEmail" class="form__label">E-mail *</label>
+            <input id="contactEmail" name="email" type="email" required 
+                   autocomplete="email" class="form__input">
+            
+            <label for="contactMessage" class="form__label">Сообщение *</label>
+            <textarea id="contactMessage" name="message" rows="4" required 
+                      placeholder="Опишите ваш вопрос..." class="form__textarea"></textarea>
+            
+            <div class="form__actions">
+                <button type="button" id="closeContactDialog" class="form__button form__button--secondary">Отмена</button>
+                <button type="submit" class="form__button form__button--primary">Отправить</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="main.js" defer></script>
 </body>
 </html>
